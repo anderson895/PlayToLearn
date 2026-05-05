@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm ls *)",
+      "Bash(npx expo *)",
+      "Bash(npx expo-doctor *)",
+      "PowerShell(firebase *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(npx expo install expo-auth-session expo-crypto 2>&1)",
+      "PowerShell(npx expo whoami 2>&1)"
+    ]
+  }
+}

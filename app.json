@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Play to Learn",
+    "slug": "play-to-learn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "playtolearn",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#58CC02"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.playtolearn.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Allow Play to Learn to use the microphone for voice-based AI tutor lessons.",
+        "NSSpeechRecognitionUsageDescription": "Allow Play to Learn to recognize speech to help you practice pronunciation."
+      }
+    },
+    "android": {
+      "package": "com.playtolearn.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#58CC02"
+      },
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-secure-store",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Play to Learn to access your microphone."
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
