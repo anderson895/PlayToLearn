@@ -107,6 +107,39 @@ export function useGoogleAuth() {
   return { signIn, response };
 }
 
+/**
+ * Maps Firebase auth error codes to friendly, user-facing messages.
+ * Falls back to the raw message for unknown codes.
+ */
+export function authErrorMessage(err: unknown): string {
+  const code = (err as { code?: string })?.code;
+  switch (code) {
+    case 'auth/invalid-email':
+      return 'That email address looks invalid.';
+    case 'auth/user-disabled':
+      return 'This account has been disabled.';
+    case 'auth/user-not-found':
+    case 'auth/wrong-password':
+    case 'auth/invalid-credential':
+      return 'Email or password is incorrect.';
+    case 'auth/email-already-in-use':
+      return 'This email is already registered. Try logging in.';
+    case 'auth/weak-password':
+      return 'Password is too weak. Use at least 6 characters.';
+    case 'auth/too-many-requests':
+      return 'Too many attempts. Please wait a moment and try again.';
+    case 'auth/network-request-failed':
+      return 'Network error. Check your connection and try again.';
+    case 'auth/operation-not-allowed':
+      return 'This sign-in method is not enabled. Contact support.';
+    case 'auth/popup-closed-by-user':
+    case 'auth/cancelled-popup-request':
+      return 'Sign-in was cancelled.';
+    default:
+      return (err as { message?: string })?.message ?? 'Something went wrong. Try again.';
+  }
+}
+
 function stubAuth(email: string, name?: string): AuthResponse {
   const user: User = {
     id: `local-${Date.now()}`,
