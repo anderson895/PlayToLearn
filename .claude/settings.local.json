@@ -8,7 +8,18 @@
       "PowerShell(firebase *)",
       "PowerShell(Remove-Item *)",
       "PowerShell(npx expo install expo-auth-session expo-crypto 2>&1)",
-      "PowerShell(npx expo whoami 2>&1)"
+      "PowerShell(npx expo whoami 2>&1)",
+      "Bash(where eas *)",
+      "Bash(eas --version)",
+      "Bash(eas whoami *)",
+      "Bash(eas init *)",
+      "Bash(eas env:create *)",
+      "Bash(eas build *)",
+      "Bash(eas credentials *)",
+      "Bash(eas build:view a788bb29-7883-4194-93d4-e0e871828dfd)",
+      "Bash(npm ci *)",
+      "Bash(eas build:view ce9e6e04-92ab-4b35-a542-90e7a1be9bca)",
+      "Bash(eas build:list --platform android --limit 3)"
     ]
   }
 }

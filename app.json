@@ -7,10 +7,6 @@
     "scheme": "playtolearn",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "splash": {
-      "resizeMode": "contain",
-      "backgroundColor": "#58CC02"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.playtolearn.app",
@@ -26,7 +22,9 @@
       },
       "permissions": [
         "RECORD_AUDIO",
-        "INTERNET"
+        "INTERNET",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
       ]
     },
     "web": {
@@ -50,8 +48,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "your-eas-project-id"
+        "projectId": "60b1457f-919d-483f-b631-435e4692a8ab"
       }
-    }
+    },
+    "owner": "padillajoshuaanderson.pdm"
   }
 }
